@@ -9,16 +9,16 @@ Auteur : Etienne CADDET
 Année Spéciale 2019-2020
 
 ### Sujet du projet Web :
-  Développer une maquette de site de vente en ligne (produits au choix)page d'accueil avec message du jour, promotions et fonction de recherche page de résultat de recherche avec une liste de produits page de description détaillée pour un produit sélectionné dans la liste.
+Développer une maquette de site de vente en ligne (produits au choix)page d'accueil avec message du jour, promotions et fonction de recherche page de résultat de recherche avec une liste de produits page de description détaillée pour un produit sélectionné dans la liste.
 
-  Éléments de gestion du panier:
-      - possibilité d'ajouter un article
-      - voir le contenu du panier
-      - retirer un article du panier
-      - effectuer l'achat
+Éléments de gestion du panier:
+  - possibilité d'ajouter un article
+  - voir le contenu du panier
+  - retirer un article du panier
+  - effectuer l'achat
 
-  Page "qui sommes-nous ?" de présentation du site, avec le nom des auteurs
-  Page "détails techniques" avec une description des méthodes employées (cf. CR)
+Page "qui sommes-nous ?" de présentation du site, avec le nom des auteurs
+Page "détails techniques" avec une description des méthodes employées (cf. CR)
 
 
 ### Contraintes
