@@ -2,6 +2,7 @@
 
 ## Description
 Projet de site de vente en ligne pour l'IUT.
+
 Auteur : Etienne CADDET
 
 ## Consignes
@@ -18,6 +19,7 @@ Développer une maquette de site de vente en ligne (produits au choix)page d'acc
   - effectuer l'achat
 
 Page "qui sommes-nous ?" de présentation du site, avec le nom des auteurs
+
 Page "détails techniques" avec une description des méthodes employées (cf. CR)
 
 
