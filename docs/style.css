@@ -2,6 +2,10 @@
   filter: invert(100%);
 }
 
+.logo {
+  background-image: radial-gradient(rgba(255,255,255,1) 20%, rgba(255,255,255,0) 80%);
+}
+
 header {
   margin: 0;
   padding: 0;
@@ -15,8 +19,12 @@ header {
   font-weight: bold;
 }
 
+nav{
+  height:100%;
+}
+
 /* menu */
-header > ul {
+header ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -29,12 +37,12 @@ header > ul {
 }
 
 /* taille de l'icon */
-header > ul li:first-child img, header > ul li:last-child img {
+#menu-accueil img, #menu-panier img {
   height:2.8rem;
   margin-right: 0.5rem;
 }
 
-header > ul li {
+header ul li {
   display:flex;
   align-items: center;
   justify-content: space-around;
@@ -44,11 +52,11 @@ header > ul li {
   /* border: 1px solid red; */
 }
 
-header > ul li:last-child {
+#menu-panier {
   width:10%;
 }
 
-header > ul li a {
+header ul li a {
   display: flex;
   align-items: center;
   color: white;
@@ -57,18 +65,18 @@ header > ul li a {
   /* border: 1px solid red; */
 }
 
-header > ul li a:hover {
+header ul li a:hover {
   /* color:#EEBB99; */
   text-decoration: underline;
 }
 
-#recherche {
+#menu-recherche form {
   display:flex;
   justify-content: center;
   width:100%;
 }
 
-#recherche input{
+#menu-recherche form input{
   border: none;
   padding: 6px 6px;
   font-size: 1rem;
@@ -76,15 +84,20 @@ header > ul li a:hover {
   width:80%;
 }
 
-#recherche button{
+#menu-recherche form button{
   border: none;
   cursor: pointer;
   display: block;
   width:20%;
   padding:0;
+  background-color: #D3D3D3;
 }
 
-#recherche button img{
+#menu-recherche form button:hover{
+  background-color: #AAA;
+}
+
+#menu-recherche form button img{
   width:100%;
   max-width:1.8rem;
   margin:0;
@@ -93,6 +106,14 @@ header > ul li a:hover {
 header ~ h1 {
   margin-top: 4rem;
 }
+
+
+
+
+
+
+/*****************Screen width modif****************/
+
 
 @media screen and (max-width: 900px) {
 
@@ -106,11 +127,11 @@ header ~ h1 {
   }
 
   /* taille de l'icon */
-  header > ul li:first-child img, header > ul li:last-child img {
+  #menu-accueil img, #menu-panier img {
     height:2.4rem;
   }
 
-  #recherche input{
+  #menu-recherche form input{
     font-size: 0.9rem;
   }
 }
@@ -139,7 +160,11 @@ header ~ h1 {
   }
 
   /* taille de l'icon */
-  header > ul li:first-child img, header > ul li:last-child img {
+  #menu-accueil img, #menu-panier img {
     height:2rem;
+  }
+
+  header ~ h1 {
+    margin-top: 14rem;
   }
 }

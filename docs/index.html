@@ -4,29 +4,42 @@
   <head>
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Etienne</title>
+    <title>TuFlix</title>
+    <script>
+
+      function timedRefresh(timeoutPeriod) {
+      	setTimeout("location.reload(true);",timeoutPeriod);
+      }
+
+      window.onload = timedRefresh(20000);
+
+    </script>
   </head>
 
   <body>
 
     <header>
-      <ul>
-        <li><img src="ressources/icons/menu-24px.svg" class="svg-white" alt="Menu"/>Menu</li>
-        <li><a href="#"><img src="ressources/icons/home-24px.svg" class="svg-white" alt="Accueil"/>Nom du site</a></li>
-        <li><a href="#">Qui sommes-nous?</a></li>
-        <li><a href="#">Détails techniques</a></li>
+      <nav>
+        <ul>
+          <!-- <li><img src="ressources/icons/menu-24px.svg" class="svg-white" alt="Menu"/>Menu</li> -->
+          <li id="menu-accueil"><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Tux_Mono.svg" class="logo" alt="Accueil"/>TuFlix</a></li>
+          <li id="menu-qui"><a href="#">Qui sommes-nous?</a></li>
+          <li id="menu-details"><a href="#">Détails techniques</a></li>
 
-        <li>
-          <form id="recherche">
-            <input name="rechercher" placeholder="Rechercher...">
-            <button><img src="ressources/icons/search-24px.svg" alt="Recherche"/></button>
-          </form>
-        </li>
-        <li><a href="#"><img src="ressources/icons/shopping_cart-24px.svg" alt="Panier" class="svg-white"/></a></li>
-      </ul>
+          <li id="menu-recherche">
+            <form id="recherche">
+              <input name="rechercher" placeholder="Rechercher...">
+              <button><img src="ressources/icons/search-24px.svg" alt="Recherche"/></button>
+            </form>
+          </li>
+          <li id="menu-panier"><a href="#"><img src="ressources/icons/shopping_cart-24px.svg" alt="Panier" class="svg-white"/></a></li>
+        </ul>
+      </nav>
     </header>
 
     <h1>Hello</h1>
+
+
 
     <footer>
 
