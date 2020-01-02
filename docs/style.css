@@ -3,24 +3,33 @@
 }
 
 .logo {
-  background-image: radial-gradient(rgba(255,255,255,1) 20%, rgba(255,255,255,0) 80%);
+  /* background-image: radial-gradient(rgba(255,255,255,1) 20%, rgba(255,255,255,0) 80%); */
+
+}
+
+body {
+  background-color: rgb(37,37,37);
+  color: #CCC;
+  padding:0;
+  margin:0;
 }
 
 header {
   margin: 0;
   padding: 0;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width:100%;
-  height:4rem;
+  height:4.2rem;
   font-family: Arial;
-  font-size: 1.2em;
+  font-size: 1rem;
   font-weight: bold;
 }
 
-nav{
+header > nav{
   height:100%;
+  background-image: linear-gradient(rgba(15,15,15,1) 10%, rgba(37,37,37,0.7) 100%);
 }
 
 /* menu */
@@ -28,52 +37,80 @@ header ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: rgba(30,30,65,0.98);
-  height:100%;
+  /* background-color: rgba(30,30,65,0.98); */
+  height:95%;
   overflow: hidden;
   display:flex;
   justify-content: space-around;
   align-items: center;
 }
 
-/* taille de l'icon */
-#menu-accueil img, #menu-panier img {
-  height:2.8rem;
-  margin-right: 0.5rem;
-}
-
 header ul li {
   display:flex;
   align-items: center;
   justify-content: space-around;
-  width: 22%;
   flex-wrap: wrap;
   overflow:hidden;
   /* border: 1px solid red; */
 }
 
-#menu-panier {
-  width:10%;
+#menu-menu {
+  display:none;
 }
+
+/* taille de l'icon */
+#menu-accueil img {
+  display:block;
+  max-width:100%;
+  max-height: 2.5rem;
+}
+
+#menu-panier img {
+  height:2.5rem;
+}
+
+/*-----------taille des éléments du menu (total = 100%)----------*/
+
+#menu-accueil {
+  min-width:15%;
+}
+
+#menu-qui {
+  min-width:15%;
+}
+
+#menu-details {
+  min-width:20%;
+}
+
+#menu-recherche {
+  min-width:40%;
+}
+
+#menu-panier {
+  min-width:10%;
+}
+
+/*----------------------fin taille éléments menu-----------------*/
 
 header ul li a {
   display: flex;
   align-items: center;
-  color: white;
+  color: inherit;
   text-align: center;
   text-decoration: none;
   /* border: 1px solid red; */
 }
 
 header ul li a:hover {
-  /* color:#EEBB99; */
-  text-decoration: underline;
+  color:#FFF;
+  /* text-decoration: underline; */
 }
 
 #menu-recherche form {
   display:flex;
-  justify-content: center;
-  width:100%;
+  margin-left: 20%;
+  width:80%;
 }
 
 #menu-recherche form input{
@@ -103,11 +140,15 @@ header ul li a:hover {
   margin:0;
 }
 
-header ~ h1 {
-  margin-top: 4rem;
+/* header ~ h1 {
+  margin-top: 4.5rem;
+} */
+
+section {
+  width:50%;
+  text-align: justify;
+  margin:auto;
 }
-
-
 
 
 
@@ -115,20 +156,25 @@ header ~ h1 {
 /*****************Screen width modif****************/
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
 
   header {
-    font-size:1.1em;
-    height: 3.8rem;
-  }
-
-  header > ul li {
-    border: 1px solid red;
+    font-size:0.95em;
+    height: 4rem;
   }
 
   /* taille de l'icon */
   #menu-accueil img, #menu-panier img {
     height:2.4rem;
+  }
+
+  #menu-recherche {
+    min-width:30%;
+  }
+
+  #menu-recherche form {
+    margin-left: 0;
+    width:100%;
   }
 
   #menu-recherche form input{
@@ -139,7 +185,7 @@ header ~ h1 {
 @media screen and (max-width: 800px) {
 
   header {
-    font-size:1em;
+    font-size:0.85em;
   }
 
 }
@@ -148,14 +194,19 @@ header ~ h1 {
 
   header {
     font-size:1em;
-    height: 14rem;
+    height: 11rem;
   }
 
-  header > ul {
+  header > nav{
+    height:90%;
+    background-image: linear-gradient(rgba(15,15,15,1) 30%, rgba(15,15,15,0) 100%);
+  }
+
+  header ul {
     flex-wrap:wrap;
   }
 
-  header > ul li {
+  header ul li {
     width: 100%;
   }
 
@@ -164,7 +215,14 @@ header ~ h1 {
     height:2rem;
   }
 
-  header ~ h1 {
-    margin-top: 14rem;
+  #menu-recherche {
+    width: 85%;
+  }
+
+  #menu-panier {
+    position: fixed;
+    top:5px;
+    right:0;
+    width: 15%;
   }
 }
