@@ -213,7 +213,7 @@ section {
 
 #films ul {
   width:100%;
-  min-width: 400px;
+  min-width: 350px;
   display: grid;
   grid-template-columns: auto;
   padding: 0;
@@ -222,23 +222,24 @@ section {
 #films ul li {
   display: block;
   width: 100%;
-  min-width: 400px;
+  min-width: 370px;
   max-height: 250px;
   height:25vh;
+  margin-bottom: 15px;
   background-color: rgb(22,22,22);
 }
 
 #films ul li article {
   display: grid;
   grid-template-columns: 20% auto 20%;
-  min-width: 400px;
+  min-width: 370px;
   height:100%;
   overflow:hidden;
   align-items: center;
 }
 
 .film-affiche {
-  max-height: 120%;
+  max-height: 100%;
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
@@ -247,7 +248,7 @@ section {
 .film-description {
   text-align: justify;
   max-height: 100%;
-  padding-top: 10px;
+  padding: 10px;
   margin: 0 auto;
   overflow:hidden;
   display:block;
@@ -256,12 +257,14 @@ section {
 .film-description h1 {
   display:inline-block;
   margin: 0;
+  padding-top: 5px;
 }
 
 .film-description a {
-  color: rgb(255,10,10);
+  color: rgb(255,15,15);
   float:right;
   margin: 0;
+  padding-top: 5px;
   text-decoration: underline;
 }
 
@@ -269,6 +272,57 @@ section {
   margin: 0 auto;
   text-align: center;
   overflow:hidden;
+  min-width: 80%;
+  height:100%;
+}
+
+.prix, .prix-promo {
+  font-weight: bold;
+}
+
+.prix-promo {
+  display:none;
+}
+
+p.prix {
+  font-size: 1.8rem;
+  padding-top:10px;
+  margin: auto;
+}
+
+.en-promo p.prix {
+  font-size: 1.2rem;
+  padding:0;
+  margin: auto;
+  text-decoration: line-through;
+}
+
+.en-promo p.prix-promo {
+  display: block;
+  margin: 5px auto;
+  font-size: 2rem;
+  color: rgb(255,10,10);
+  text-shadow: 0px 0px 3px black;
+}
+
+.bloc-prix {
+  display:block;
+  height:80%;
+  padding-top: 20%;
+}
+
+.film-prix button {
+  border: none;
+  color: #DDD;
+  text-shadow: 1px 1px 2px black;
+  cursor: pointer;
+  width:100%;
+  height: 2rem;
+  position: relative;
+  top:0;
+  font-size:0.9rem;
+  transform: translate(0, -160%);
+  background-color: rgb(255,15,15);
 }
 
 main > h1 {
@@ -379,6 +433,14 @@ footer p img {
 
   #films ul li {
     max-height:180px;
+  }
+
+  .film-prix button {
+    font-size:0.8rem;
+  }
+
+  .film-description p {
+    font-size: 0.9rem;
   }
 }
 
