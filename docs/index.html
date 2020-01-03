@@ -4,9 +4,9 @@
   <head>
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="icon" type="image/png" href="ressources/icons/Tuflix_icon.png">
-    <title>TuFlix</title>
-    <script>
+    <link rel="icon" type="image/png" href="ressources/visuels/Tuflix_icon.png">
+    <title>TuFlix | Accueil</title>
+    <!-- <script>
 
       function timedRefresh(timeoutPeriod) {
       	setTimeout("location.reload(true);",timeoutPeriod);
@@ -14,69 +14,85 @@
 
       window.onload = timedRefresh(20000);
 
-    </script>
+    </script> -->
   </head>
 
   <body>
 
-    <header>
+    <header class="animable">
       <nav>
         <ul>
-          <!-- <li><img src="ressources/icons/menu-24px.svg" class="svg-white" alt="Menu"/>Menu</li> -->
-          <!-- <li id="menu-accueil"><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Tux_Mono.svg" class="logo" alt="Accueil"/>TuFlix</a></li> -->
-          <li id="menu-menu"><img src="ressources/images/TuFlix_logo@2x.png"</li>
-          <li id="menu-accueil"><a href="#"><img src="ressources/images/TuFlix_logo@2x.png" class="logo" alt="Accueil TuFlix"/></a></li>
-          <li id="menu-qui"><a href="#">Qui sommes-nous?</a></li>
-          <li id="menu-details"><a href="#">Détails techniques</a></li>
+          <li id="menu-menu" class="animable"><img src="ressources/visuels/menu-24px.svg" class="invert-color" alt="Menu"/></li>
+          <li id="menu-accueil" class="animable"><a href=""><img src="ressources/visuels/TuFlix_logo@2x.png" class="logo" alt="Accueil TuFlix"/></a></li>
+          <li id="menu-qui" class="animable"><a href="#">Qui sommes-nous?</a></li>
+          <li id="menu-details" class="animable"><a href="details_techniques.html">Détails techniques</a></li>
 
-          <li id="menu-recherche">
-            <form id="recherche">
-              <input name="rechercher" placeholder="Rechercher...">
-              <button><img src="ressources/icons/search-24px.svg" alt="Recherche"/></button>
+          <li id="menu-recherche" class="animable">
+            <form id="recherche" action="resultats.html">
+              <input name="champs de recherche" placeholder="Rechercher: titre, style, réalisateur...">
+              <button aria-label="rechercher"><img src="ressources/visuels/search-24px.svg" alt="rechercher"/></button>
             </form>
           </li>
-          <li id="menu-panier"><a href="#"><img src="ressources/icons/shopping_cart-24px.svg" alt="Panier" class="svg-white"/></a></li>
+          <li id="menu-panier" class="animable"><a href="panier.html"><img src="ressources/visuels/shopping_cart-24px.svg" alt="Panier" class="invert-color"/></a></li>
         </ul>
       </nav>
     </header>
 
-    <h1>Hello</h1>
-    <section>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <section>
+    <main>
+      <section id="news">
+        <h1>Nouveautés</h1>
+        <section>
+          <!-- Effet carousel basé sur: https://la-cascade.io/un-carrousel-responsif-en-pur-css/ -->
+          <figure>
+            <img src="ressources/news/10years.jpg" alt="Blender célèbre ses 10 ans de création de films"/>
+            <img src="ressources/news/agent327.jpg" alt="Nouveau film disponnible: Agent 327"/>
+            <img src="ressources/news/spring.jpg" alt="Nouveau film disponnible: Spring"/>
+            <img src="ressources/news/caminades.jpg" alt="Nouveau film disponnible: Caminades"/>
+          </figure>
+        </section>
+      </section>
+
+      <section id="films">
+        <h1>Liste de films</h1>
+        <ul>
+          <li>
+            <article>
+              <img class="film-affiche animable" src="ressources/affiches/Sintel_poster.jpg" alt="Affiche du film Sintel"/>
+              <div class="film-description animable" aria-label="description du film">
+                <h1>Sintel</h1>
+                <a href="produit.html">Fiche détaillée</a>
+                <p>Une jeune femme solitaire, Sintel, secourt et se lie d'amitié avec un dragonneau, qu'elle nomme Scales.
+                  Mais lorsque celui-ci se fait enlever par un dragon adulte, Sintel décide de se lancer dans une dangereuse
+                  quête pour retrouver son compagnon. </p>
+                <div class="cover-text"></div>
+              </div>
+              <div class="film-prix animable en-promo" aria-label="prix du film et ajout panier">
+                <p class="prix">350€</p>
+                <p class="prix-promotion">300€</p>
+                <button aria-label="ajouter au panier">Ajouter au panier</button>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+    </main>
 
 
     <footer>
-
+      <address>
+        <section>
+          <h1>Contact</h1>
+          <p>92, boulevard Niels Bohr<br>69622 Villeurbanne cedex</p>
+          <p><img src="ressources/visuels/phone-24px.svg" class="invert-color" alt="téléphone"/>04 72 69 21 82</p>
+        </section>
+        <section>
+          <p><img src="ressources/visuels/icon-instagram.svg" class="invert-color" alt="instagram"/>Instagram</p>
+          <p><img src="ressources/visuels/icon-facebook.svg" class="invert-color" alt="facebook"/>Facebook</p>
+          <p><img src="ressources/visuels/icon-twitter.svg" class="invert-color" alt="twitter"/>Twitter</p>
+        </section>
+      </address>
+      <p id="copyright">© Copyright TuFlix (2019-2020)</p>
     </footer>
   </body>
 </html>

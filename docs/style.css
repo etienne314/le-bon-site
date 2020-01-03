@@ -1,18 +1,23 @@
-.svg-white{
+/* inverse la couleur des .svg */
+.invert-color{
   filter: invert(100%);
 }
 
-.logo {
-  /* background-image: radial-gradient(rgba(255,255,255,1) 20%, rgba(255,255,255,0) 80%); */
-
+/* transition fluide lors de changement de tailles
+et autres propriétés pour les éléments de cette classe */
+.animable {
+  transition-duration: .4s;
 }
 
 body {
-  background-color: rgb(37,37,37);
-  color: #CCC;
   padding:0;
   margin:0;
+  font-family: Arial;
 }
+
+/*----------------------------------------------------*/
+/*-------------------- DEBUT MENU --------------------*/
+/*----------------------------------------------------*/
 
 header {
   margin: 0;
@@ -21,26 +26,27 @@ header {
   top: 0;
   left: 0;
   width:100%;
-  height:4.2rem;
+  height: 4.2rem;
+  background-color: rgba(25,25,25,0.95);
+  color: #DDD;
   font-family: Arial;
   font-size: 1rem;
   font-weight: bold;
+  z-index: 2;
 }
 
 header > nav{
   height:100%;
-  background-image: linear-gradient(rgba(15,15,15,1) 10%, rgba(37,37,37,0.7) 100%);
+  /* background-image: linear-gradient(rgba(25,25,25,0.95) 80%, rgba(37,37,37,0) 100%); */
 }
 
-/* menu */
 header ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  /* background-color: rgba(30,30,65,0.98); */
-  height:95%;
+  height:100%;
   overflow: hidden;
-  display:flex;
+  display: flex;
   justify-content: space-around;
   align-items: center;
 }
@@ -54,6 +60,7 @@ header ul li {
   /* border: 1px solid red; */
 }
 
+/* dans le but de créer un bouton menu lorsque l'écran est plus petit */
 #menu-menu {
   display:none;
 }
@@ -62,20 +69,16 @@ header ul li {
 #menu-accueil img {
   display:block;
   max-width:100%;
-  max-height: 2.5rem;
+  height:2.1rem;
 }
 
 #menu-panier img {
   height:2.5rem;
 }
 
-/*-----------taille des éléments du menu (total = 100%)----------*/
+/*----taille des éléments du menu (total = 100%)----*/
 
-#menu-accueil {
-  min-width:15%;
-}
-
-#menu-qui {
+#menu-accueil, #menu-qui {
   min-width:15%;
 }
 
@@ -91,7 +94,7 @@ header ul li {
   min-width:10%;
 }
 
-/*----------------------fin taille éléments menu-----------------*/
+/*----fin taille éléments menu----*/
 
 header ul li a {
   display: flex;
@@ -103,8 +106,13 @@ header ul li a {
 }
 
 header ul li a:hover {
-  color:#FFF;
-  /* text-decoration: underline; */
+  color:#FFFFFF;
+  text-shadow: 0px 0px 4px rgba(225,225,225,0.4);
+}
+
+.active{
+  text-decoration: underline;
+  text-decoration-color: rgb(255,40,40);
 }
 
 #menu-recherche form {
@@ -140,21 +148,206 @@ header ul li a:hover {
   margin:0;
 }
 
-/* header ~ h1 {
-  margin-top: 4.5rem;
-} */
+/*--------------------------------------------------*/
+/*-------------------- FIN MENU --------------------*/
+/*--------------------------------------------------*/
+
+
+
+/* Effet carousel basé sur: https://la-cascade.io/un-carrousel-responsif-en-pur-css/ */
+@keyframes slidy {
+  0% { left: 0%; }
+  23% { left: 0%; }
+  25% { left: -100%; }
+  48% { left: -100%; }
+  50% { left: -200%; }
+  73% { left: -200%; }
+  75% { left: -300%; }
+  99% { left: -300%; }
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto;
+  color: #DDD;
+  min-height: 100vh;
+  margin-top: -4.2rem;
+  padding-top: 4.2rem;
+  background-color: rgb(37,37,37);
+  text-align: left;
+}
 
 section {
-  width:50%;
+  display: grid;
+  grid-template-columns: auto;
+  margin: 0 auto;
+}
+
+#news {
+  overflow: hidden;
+  width:60%;
+  max-width: 1000px;
+}
+
+#news figure img {
+  width: 25%;
+  float: left;
+}
+
+#news figure {
+  position: relative;
+  width: 400%;
+  margin: 0;
+  left: 0;
+  font-size: 0;
+  text-align: left;
+  animation: 20s slidy infinite;
+}
+
+
+#films {
+  max-width: 80%;
+}
+
+#films ul {
+  width:100%;
+  min-width: 400px;
+  display: grid;
+  grid-template-columns: auto;
+  padding: 0;
+}
+
+#films ul li {
+  display: block;
+  width: 100%;
+  min-width: 400px;
+  max-height: 250px;
+  height:25vh;
+  background-color: rgb(22,22,22);
+}
+
+#films ul li article {
+  display: grid;
+  grid-template-columns: 20% auto 20%;
+  min-width: 400px;
+  height:100%;
+  overflow:hidden;
+  align-items: center;
+}
+
+.film-affiche {
+  max-height: 120%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.film-description {
   text-align: justify;
-  margin:auto;
+  max-height: 100%;
+  padding-top: 10px;
+  margin: 0 auto;
+  overflow:hidden;
+  display:block;
+}
+
+.film-description h1 {
+  display:inline-block;
+  margin: 0;
+}
+
+.film-description a {
+  color: rgb(255,10,10);
+  float:right;
+  margin: 0;
+  text-decoration: underline;
+}
+
+.film-prix {
+  margin: 0 auto;
+  text-align: center;
+  overflow:hidden;
+}
+
+main > h1 {
+  width: 80%;
+  margin: 20px auto 0 auto;
+  border: 1px solid red;
+  padding-bottom: 0;
+}
+
+main > h1 ~ section {
+  width: 80%;
+  margin: 0 auto 20px auto;
+  border: 1px solid red;
 }
 
 
 
+/*----------------------------------------------------*/
+/*------------------- DEBUT FOOTER -------------------*/
+/*----------------------------------------------------*/
 
-/*****************Screen width modif****************/
+footer {
+  color: #DDD;
+  max-width:100%;
+  margin:0;
+  background-color: rgb(22,22,22);
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
+footer h1 {
+  font-size: 1.2rem;
+  margin: 0;
+  padding-top: 10px;
+}
+
+footer address {
+  width:60%;
+  display:grid;
+  grid-template-columns: 70% 30%;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+footer section{
+  width: 100%;
+}
+
+footer p {
+  font-size: .8rem;
+  margin: 0;
+  padding-top: 10px;
+  align-items: stretch;
+}
+
+footer p img {
+  display:inline-block;
+  height: 1.6em;
+  margin-right: 5px;
+  margin-bottom:-.3em;
+}
+
+#copyright {
+  display:block;
+  width:100%;
+  text-align: center;
+  margin-bottom: 5px;
+  color: #999;
+  font-size: .8rem;
+}
+
+/*----------------------------------------------------*/
+/*-------------------- FIN FOOTER --------------------*/
+/*----------------------------------------------------*/
+
+
+
+/***************** Screen width modif ****************/
 
 @media screen and (max-width: 1000px) {
 
@@ -164,7 +357,10 @@ section {
   }
 
   /* taille de l'icon */
-  #menu-accueil img, #menu-panier img {
+  #menu-accueil img {
+    height:2rem;
+  }
+  #menu-panier img {
     height:2.4rem;
   }
 
@@ -180,12 +376,20 @@ section {
   #menu-recherche form input{
     font-size: 0.9rem;
   }
+
+  #films ul li {
+    max-height:180px;
+  }
 }
 
 @media screen and (max-width: 800px) {
 
   header {
     font-size:0.85em;
+  }
+
+  #films ul li {
+    max-height:160px;
   }
 
 }
@@ -199,7 +403,7 @@ section {
 
   header > nav{
     height:90%;
-    background-image: linear-gradient(rgba(15,15,15,1) 30%, rgba(15,15,15,0) 100%);
+    background-image: linear-gradient(rgba(25,25,25,0.95) 95%, rgba(37,37,37,0) 100%);
   }
 
   header ul {
@@ -224,5 +428,30 @@ section {
     top:5px;
     right:0;
     width: 15%;
+  }
+
+  #films ul li article {
+    grid-template-columns: 30% 40% 30%;
+  }
+
+  .film-description {
+    text-align: center;
+  }
+
+  .film-description p {
+    display: none;
+  }
+
+  .film-description h1 {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .film-description a {
+    float: none;
+  }
+
+  footer address {
+    width:70%;
   }
 }

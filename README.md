@@ -34,10 +34,3 @@ Page "détails techniques" avec une description des méthodes employées (cf. CR
 ### IMPORTANT
   - Votre code devra être valide vis-à-vis des validateurs du W3C. Des validations de contrôle seront systématiquement effectuées lors de la correction.
   - Le site devra être responsive, et réagir correctement à des modifications de taille d'écran.
-
-
-  Envoyer un mail à *daniel.muller@ec-lyon.fr* avant le : 07 janvier 2020 24:00 - sinon pénalités
-      - Avec l'adresse permettant de consulter votre site en ligne
-      - Et l'adresse du dépôt github où retrouver les fichiers du projet
-
-    N.B. Pour mettre un petit site statique en ligne, cf. https://pages.github.com/
