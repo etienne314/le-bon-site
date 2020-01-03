@@ -223,7 +223,8 @@ section {
   display: block;
   width: 100%;
   min-width: 370px;
-  max-height: 250px;
+  max-height: 240px;
+  min-height: 110px;
   height:25vh;
   margin-bottom: 15px;
   background-color: rgb(22,22,22);
@@ -515,5 +516,24 @@ footer p img {
 
   footer address {
     width:70%;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  p.prix {
+    padding-top:0;
+  }
+
+  .bloc-prix {
+    height:80%;
+    padding-top: 10%;
+  }
+
+  .film-prix button {
+    transform: translate(0, -100%);
+  }
+
+  .en-promo p.prix-promo {
+    margin: 0 auto;
   }
 }
