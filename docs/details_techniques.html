@@ -4,8 +4,9 @@
   <head>
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="queries.css">
     <link rel="icon" type="image/png" href="ressources/visuels/Tuflix_icon.png">
-    <title>TuFlix | Détails techniques</title>
+    <title>TuFlix | Accueil</title>
   </head>
 
   <body>
@@ -13,11 +14,10 @@
     <header class="animable">
       <nav>
         <ul>
-          <!-- <li><img src="ressources/visuels/menu-24px.svg" class="invert-color" alt="Menu"/>Menu</li> -->
-          <li id="menu-menu" class="animable"><img src="ressources/visuels/menu-24px.svg" class="invert-color" alt="Menu"/></li>
-          <li id="menu-accueil" class="animable"><a href="index.html"><img src="ressources/visuels/TuFlix_logo@2x.png" class="logo" alt="Accueil TuFlix"/></a></li>
-          <li id="menu-qui" class="animable"><a href="#">Qui sommes-nous?</a></li>
-          <li id="menu-details" class="animable active"><a href="">Détails techniques</a></li>
+          <li id="menu-logo" class="animable"><a href="index.html"><img src="ressources/visuels/TuFlix_logo@2x.png" class="logo" alt="Accueil TuFlix"/></a></li>
+          <li id="menu-accueil" class="animable"><a href="index.html">Accueil</a></li>
+          <li id="menu-qui" class="animable"><a href="who.html">Qui sommes-nous?</a></li>
+          <li id="menu-details" class="animable active"><a href="details_techniques.html">Détails techniques</a></li>
 
           <li id="menu-recherche" class="animable">
             <form id="recherche" action="resultats.html">
@@ -53,8 +53,10 @@
               <li>Plus de commentaires dans les fichiers</li>
               <li>Regrouper des blocs par propriétés communes</li>
               <li>Rendre les éléments plus "responsive" (liste des produits)</li>
+              <li>Rendre les "responsive" pour téléphone (ex: faire un bouton menu lorsque l'écran est un téléphone, cf. <code>id="menu-menu"</code>)</li>
               <li>Améliorer le design de la liste des produits</li>
               <li>Mieux se renseigner sur les bonnes pratiques du CSS</li>
+              <li>Mettre 3 colonnes dans le footer</li>
             </ul>
           </section>
         </section>
@@ -65,9 +67,18 @@
 
     <footer>
       <address>
-        Contact: adresse, numéro de tel, facebook, twitter, instagram
+        <section>
+          <h1>Contact</h1>
+          <p>92, boulevard Niels Bohr<br>69622 Villeurbanne cedex</p>
+          <p><img src="ressources/visuels/phone-24px.svg" class="invert-color" alt="téléphone"/>04 72 69 21 82</p>
+        </section>
+        <section>
+          <p><img src="ressources/visuels/icon-instagram.svg" class="invert-color" alt="instagram"/>Instagram</p>
+          <p><img src="ressources/visuels/icon-facebook.svg" class="invert-color" alt="facebook"/>Facebook</p>
+          <p><img src="ressources/visuels/icon-twitter.svg" class="invert-color" alt="twitter"/>Twitter</p>
+        </section>
       </address>
-      <p id="copyright">© Copyright TuFlix (2020)</p>
+      <p id="copyright">© Copyright TuFlix (2019-2020)</p>
     </footer>
   </body>
 </html>

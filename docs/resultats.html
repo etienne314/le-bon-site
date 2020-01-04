@@ -4,8 +4,9 @@
   <head>
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="queries.css">
     <link rel="icon" type="image/png" href="ressources/visuels/Tuflix_icon.png">
-    <title>TuFlix | Blender movies</title>
+    <title>TuFlix | Accueil</title>
   </head>
 
   <body>
@@ -13,9 +14,9 @@
     <header class="animable">
       <nav>
         <ul>
-          <li id="menu-menu" class="animable"><img src="ressources/visuels/menu-24px.svg" class="invert-color" alt="Menu"/></li>
-          <li id="menu-accueil" class="animable"><a href="index.html"><img src="ressources/visuels/TuFlix_logo@2x.png" class="logo" alt="Accueil TuFlix"/></a></li>
-          <li id="menu-qui" class="animable"><a href="#">Qui sommes-nous?</a></li>
+          <li id="menu-logo" class="animable"><a href="index.html"><img src="ressources/visuels/TuFlix_logo@2x.png" class="logo" alt="Accueil TuFlix"/></a></li>
+          <li id="menu-accueil" class="animable"><a href="index.html">Accueil</a></li>
+          <li id="menu-qui" class="animable"><a href="who.html">Qui sommes-nous?</a></li>
           <li id="menu-details" class="animable"><a href="details_techniques.html">Détails techniques</a></li>
 
           <li id="menu-recherche" class="animable">
@@ -24,22 +25,114 @@
               <button aria-label="rechercher"><img src="ressources/visuels/search-24px.svg" alt="rechercher"/></button>
             </form>
           </li>
-          <li id="menu-panier" class="animable"><a href="panier"><img src="ressources/visuels/shopping_cart-24px.svg" alt="Panier" class="invert-color"/></a></li>
+          <li id="menu-panier" class="animable"><a href="panier.html"><img src="ressources/visuels/shopping_cart-24px.svg" alt="Panier" class="invert-color"/></a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <h1>Resultats</h1>
+      <h1>Recherche</h1>
+
+      <section id="films">
+        <h1>Résultats pour "Caminandes"</h1>
+        <ul>
+
+          <li>
+            <article>
+              <img class="film-affiche" src="ressources/affiches/poster-caminandes_llamigos.jpg" alt="Affiche du film Caminandes: Llamigos"/>
+              <div class="film-description" aria-label="description du film">
+                <h1>Caminandes: Llamigos (2016)</h1>
+                <a href="produit.html">Fiche détaillée</a>
+                <p>Troisième partie du Court métrage Creative Commons réalisé par Pablo Vazquez, Beorn Leonard, and Francesco Siddi
+                  où l’on suit les drôles d’aventures d’un lama et d’une souris. Rapelle les courts métrages de Scrat,
+                  l’écureil de l’âge de Glace.</p>
+              </div>
+              <div class="film-prix" aria-label="prix du film et ajout panier">
+                <div class="bloc-prix">
+                  <p class="prix">32€</p>
+                  <p class="prix-promo">30€</p>
+                </div>
+                <button aria-label="ajouter au panier"><a href="#popup-caminandes_llamigos">Ajouter au panier</a></button>
+                <div class="popup" id="popup-caminandes_llamigos">
+                    <div class="popup-inner">
+                        <h1>Ajout d'un article au panier</h1>
+                        <article class="popup-article">
+                            <img class="film-affiche" src="ressources/affiches/poster-caminandes_llamigos.jpg" alt="Affiche du film Caminandes: Llamigos"/>
+                            <div class="film-description" aria-label="description du film">
+                                <h1>Caminandes: Llamigos (2016)</h1>
+                                <p>Troisième partie du Court métrage Creative Commons réalisé par Pablo Vazquez, Beorn Leonard, and Francesco Siddi
+                                  où l’on suit les drôles d’aventures d’un lama et d’une souris. Rapelle les courts métrages de Scrat,
+                                  l’écureil de l’âge de Glace.</p>
+                            </div>
+                            <div class="popup-prix" aria-label="prix du film et ajout panier">
+                                  <p>32€</p>
+                            </div>
+                        </article>
+                        <a class="closepopup" href="#">X</a>
+                    </div>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article>
+              <img class="film-affiche" src="ressources/affiches/poster-caminandes_grandillama.jpg" alt="Affiche du film Caminandes: Gran Dillama"/>
+              <div class="film-description" aria-label="description du film">
+                <h1>Caminandes: Gran Dillama (2013)</h1>
+                <a href="produit.html">Fiche détaillée</a>
+                <p>Deuxième partie du Court métrage Creative Commons réalisé par Pablo Vazquez, Beorn Leonard, and Francesco Siddi
+                  où l’on suit les drôles d’aventures d’un lama et d’une souris. Rapelle les courts métrages de Scrat,
+                  l’écureil de l’âge de Glace.</p>
+              </div>
+              <div class="film-prix en-promo" aria-label="prix du film et ajout panier">
+                <div class="bloc-prix">
+                  <p class="prix">25€</p>
+                  <p class="prix-promo">20€</p>
+                </div>
+                <button aria-label="ajouter au panier"><a href="#popup-caminandes_grandillama">Ajouter au panier</a></button>
+                <div class="popup" id="popup-caminandes_grandillama">
+                    <div class="popup-inner">
+                        <h1>Ajout d'un article au panier</h1>
+                        <article class="popup-article">
+                            <img class="film-affiche" src="ressources/affiches/poster-caminandes_grandillama.jpg" alt="Affiche du film Caminandes: Gran Dillama"/>
+                            <div class="film-description" aria-label="description du film">
+                                <h1>Caminandes: Gran Dillama (2013)</h1>
+                                <p>Deuxième partie du Court métrage Creative Commons réalisé par Pablo Vazquez, Beorn Leonard, and Francesco Siddi
+                                  où l’on suit les drôles d’aventures d’un lama et d’une souris. Rapelle les courts métrages de Scrat,
+                                  l’écureil de l’âge de Glace.</p>
+                            </div>
+                            <div class="popup-prix" aria-label="prix du film et ajout panier">
+                                  <p>20€</p>
+                            </div>
+                        </article>
+                        <a class="closepopup" href="#">X</a>
+                    </div>
+                </div>
+              </div>
+            </article>
+          </li>
+
+        </ul>
+      </section>
 
     </main>
 
 
     <footer>
       <address>
-        Contact: adresse, numéro de tel, facebook, twitter, instagram
+        <section>
+          <h1>Contact</h1>
+          <p>92, boulevard Niels Bohr<br>69622 Villeurbanne cedex</p>
+          <p><img src="ressources/visuels/phone-24px.svg" class="invert-color" alt="téléphone"/>04 72 69 21 82</p>
+        </section>
+        <section>
+          <p><img src="ressources/visuels/icon-instagram.svg" class="invert-color" alt="instagram"/>Instagram</p>
+          <p><img src="ressources/visuels/icon-facebook.svg" class="invert-color" alt="facebook"/>Facebook</p>
+          <p><img src="ressources/visuels/icon-twitter.svg" class="invert-color" alt="twitter"/>Twitter</p>
+        </section>
       </address>
-      <p id="copyright">© Copyright TuFlix (2020)</p>
+      <p id="copyright">© Copyright TuFlix (2019-2020)</p>
     </footer>
   </body>
 </html>

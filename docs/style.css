@@ -57,16 +57,12 @@ header ul li {
   justify-content: space-around;
   flex-wrap: wrap;
   overflow:hidden;
+  padding: 5px 0;
   /* border: 1px solid red; */
 }
 
-/* dans le but de créer un bouton menu lorsque l'écran est plus petit */
-#menu-menu {
-  display:none;
-}
-
 /* taille de l'icon */
-#menu-accueil img {
+#menu-logo img {
   display:block;
   max-width:100%;
   height:2.1rem;
@@ -78,20 +74,20 @@ header ul li {
 
 /*----taille des éléments du menu (total = 100%)----*/
 
-#menu-accueil, #menu-qui {
+/* #menu-qui, #menu-details, #menu-accueil {
   min-width:15%;
-}
-
-#menu-details {
-  min-width:20%;
-}
+} */
 
 #menu-recherche {
-  min-width:40%;
+  min-width:32%;
+}
+
+#menu-logo {
+  min-width:10%;
 }
 
 #menu-panier {
-  min-width:10%;
+  min-width:8%;
 }
 
 /*----fin taille éléments menu----*/
@@ -124,7 +120,7 @@ header ul li a:hover {
 #menu-recherche form input{
   border: none;
   padding: 6px 6px;
-  font-size: 1rem;
+  font-size: .9rem;
   display:block;
   width:80%;
 }
@@ -144,7 +140,7 @@ header ul li a:hover {
 
 #menu-recherche form button img{
   width:100%;
-  max-width:1.8rem;
+  max-width:1.7rem;
   margin:0;
 }
 
@@ -171,6 +167,7 @@ main {
   padding: 0;
   display: grid;
   grid-template-columns: auto;
+  align-content: start;
   color: #DDD;
   min-height: 100vh;
   margin-top: -4.2rem;
@@ -189,6 +186,7 @@ section {
   overflow: hidden;
   width:60%;
   max-width: 1000px;
+  margin-bottom: 1rem;
 }
 
 #news figure img {
@@ -209,6 +207,7 @@ section {
 
 #films {
   max-width: 80%;
+  align-content: start;
 }
 
 #films ul {
@@ -326,17 +325,93 @@ p.prix {
   background-color: rgb(255,15,15);
 }
 
+.film-prix button a {
+  text-decoration: none;
+  width:100%;
+  height:100%;
+  color: #DDD;
+}
+
 main > h1 {
   width: 80%;
   margin: 20px auto 0 auto;
-  border: 1px solid red;
   padding-bottom: 0;
+}
+
+h1 ~ section {
+  width: 100%;
 }
 
 main > h1 ~ section {
   width: 80%;
   margin: 0 auto 20px auto;
-  border: 1px solid red;
+}
+
+.popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  transition: .2s ease-in-out;
+}
+.popup-inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  padding: 10px;
+  max-width: 800px;
+  max-height: 600px;
+  width: 60%;
+  height: 40%;
+  border-radius: 1rem;
+  background-color: rgb(22,22,22);
+  box-shadow: 1px 1px 3px black;
+  transition: .2s ease-in-out;
+}
+
+.popup:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup:target .popup-inner {
+  bottom: 0;
+  right: 0;
+}
+.closepopup {
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+  border-radius: 100%;
+  background-color: #222;
+  box-shadow: -1px 1px 3px black;
+  z-index: 4;
+  color: #fff;
+  line-height: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.popup-article {
+  margin: 10px;
+}
+
+.popup-prix {
+  font-size: 2rem;
 }
 
 
@@ -399,141 +474,3 @@ footer p img {
 /*----------------------------------------------------*/
 /*-------------------- FIN FOOTER --------------------*/
 /*----------------------------------------------------*/
-
-
-
-/***************** Screen width modif ****************/
-
-@media screen and (max-width: 1000px) {
-
-  header {
-    font-size:0.95em;
-    height: 4rem;
-  }
-
-  /* taille de l'icon */
-  #menu-accueil img {
-    height:2rem;
-  }
-  #menu-panier img {
-    height:2.4rem;
-  }
-
-  #menu-recherche {
-    min-width:30%;
-  }
-
-  #menu-recherche form {
-    margin-left: 0;
-    width:100%;
-  }
-
-  #menu-recherche form input{
-    font-size: 0.9rem;
-  }
-
-  #films ul li {
-    max-height:180px;
-  }
-
-  .film-prix button {
-    font-size:0.8rem;
-  }
-
-  .film-description p {
-    font-size: 0.9rem;
-  }
-}
-
-@media screen and (max-width: 800px) {
-
-  header {
-    font-size:0.85em;
-  }
-
-  #films ul li {
-    max-height:160px;
-  }
-
-}
-
-@media screen and (max-width: 700px) {
-
-  header {
-    font-size:1em;
-    height: 11rem;
-  }
-
-  header > nav{
-    height:90%;
-    background-image: linear-gradient(rgba(25,25,25,0.95) 95%, rgba(37,37,37,0) 100%);
-  }
-
-  header ul {
-    flex-wrap:wrap;
-  }
-
-  header ul li {
-    width: 100%;
-  }
-
-  /* taille de l'icon */
-  #menu-accueil img, #menu-panier img {
-    height:2rem;
-  }
-
-  #menu-recherche {
-    width: 85%;
-  }
-
-  #menu-panier {
-    position: fixed;
-    top:5px;
-    right:0;
-    width: 15%;
-  }
-
-  #films ul li article {
-    grid-template-columns: 30% 40% 30%;
-  }
-
-  .film-description {
-    text-align: center;
-  }
-
-  .film-description p {
-    display: none;
-  }
-
-  .film-description h1 {
-    display: block;
-    margin: 10px 0;
-  }
-
-  .film-description a {
-    float: none;
-  }
-
-  footer address {
-    width:70%;
-  }
-}
-
-@media screen and (max-height: 600px) {
-  p.prix {
-    padding-top:0;
-  }
-
-  .bloc-prix {
-    height:80%;
-    padding-top: 10%;
-  }
-
-  .film-prix button {
-    transform: translate(0, -100%);
-  }
-
-  .en-promo p.prix-promo {
-    margin: 0 auto;
-  }
-}
