@@ -5,6 +5,7 @@
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="queries.css">
+    <link rel="stylesheet" type="text/css" href="panier.css">
     <link rel="icon" type="image/png" href="ressources/visuels/Tuflix_icon.png">
     <title>TuFlix | Accueil</title>
   </head>
@@ -21,7 +22,7 @@
 
           <li id="menu-recherche" class="animable">
             <form id="recherche" action="resultats.html">
-              <input name="champs de recherche" placeholder="Rechercher: titre, style, réalisateur...">
+              <input name="champs de recherche" type="text" placeholder="Rechercher: titre, style, réalisateur...">
               <button aria-label="rechercher"><img src="ressources/visuels/search-24px.svg" alt="rechercher"/></button>
             </form>
           </li>
@@ -32,6 +33,61 @@
 
     <main>
       <h1>Panier</h1>
+      <section>
+      <table id="cart">
+        <thead>
+          <tr>
+            <th class="first">Affiche</th>
+            <th class="second">Qte</th>
+            <th class="third">Produit</th>
+            <th class="fourth">Total</th>
+            <th class="fifth">&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- shopping cart contents -->
+          <tr class="productitm" id="itm1">
+            <td><img src="ressources/affiches/poster-spring.jpg" class="thumb"></td>
+            <td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>
+            <td>Spring (2019)</td>
+            <td>35 €</td>
+            <td><a href="#itm1"><span class="remove"><img src="ressources/visuels/remove_shopping_cart-24px.svg" class="invert-color" alt="X"></span></a></td>
+          </tr>
+          <tr class="productitm" id="itm2">
+            <td><img src="ressources/affiches/poster-agent_327_barbershop.jpg" class="thumb"></td>
+            <td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>
+            <td>Agent 327: Operation Barbershop (2017)</td>
+            <td>30 €</td>
+            <td><a href="#itm2"><span class="remove"><img src="ressources/visuels/remove_shopping_cart-24px.svg" class="invert-color" alt="X"></span></a></td>
+          </tr>
+          <tr class="productitm" id="itm3">
+            <td><img src="ressources/affiches/poster-glasshalf.jpg" class="thumb"></td>
+            <td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>
+            <td>Glass Half (2015)</td>
+            <td>35 €</td>
+            <td><a href="#itm3"><span class="remove"><img src="ressources/visuels/remove_shopping_cart-24px.svg" class="invert-color" alt="X"></span></a></td>
+          </tr>
+
+          <!-- tax + subtotal -->
+          <tr class="extracosts">
+            <td class="light">Shipping &amp; Tax</td>
+            <td colspan="2" class="light"></td>
+            <td>5 €</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr class="totalprice">
+            <td class="light">Total:</td>
+            <td colspan="2">&nbsp;</td>
+            <td colspan="2"><span class="thick">105 €</span></td>
+          </tr>
+
+          <!-- checkout btn -->
+          <tr class="checkoutrow">
+            <td colspan="5" class="checkout"><button id="submitbtn">Checkout Now!</button></td>
+          </tr>
+        </tbody>
+      </table>
+      </section>
     </main>
 
 

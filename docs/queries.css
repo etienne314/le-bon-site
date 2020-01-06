@@ -103,6 +103,8 @@
 
   .film-description h1 {
     display: block;
+    text-align: center;
+    max-width: 100%;
     margin: 10px 0;
   }
 

@@ -256,6 +256,8 @@ section {
 
 .film-description h1 {
   display:inline-block;
+  text-align:left;
+  max-width: 65%;
   margin: 0;
   padding-top: 5px;
 }
@@ -346,6 +348,8 @@ main > h1 ~ section {
   width: 80%;
   margin: 0 auto 20px auto;
 }
+
+/* https://webdevtrick.com/popup-in-pure-css-and-html-get-example-with-source-code/ */
 
 .popup {
   display: flex;
@@ -441,7 +445,7 @@ footer address {
   display:grid;
   grid-template-columns: 70% 30%;
   align-items: center;
-  margin-bottom: 10px;
+  margin: 0 auto;
 }
 
 footer section{
@@ -466,7 +470,7 @@ footer p img {
   display:block;
   width:100%;
   text-align: center;
-  margin-bottom: 5px;
+  padding-bottom: 10px;
   color: #999;
   font-size: .8rem;
 }
