@@ -45,9 +45,7 @@
     width: auto;
     max-height: 400px;
   }
-  .card-infos {
-    width:auto;
-  }
+
   .card {
     font-size: .9rem;
     align-content: center;
@@ -64,19 +62,26 @@
     max-height:160px;
   }
 
-  .card-infos {
-    font-size: .8rem;
-  }
-
   .card img {
     max-width: 100%;
     max-height: 300px;
-    margin: auto;
+    margin: 10px auto;
   }
 
   .card-infos {
-    padding-left: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
     width:100%;
+  }
+
+  .card-prix {
+    font-size: 2em;
+    left:10%;
+    width:80%;
+  }
+
+  .card-prix p {
+    padding-top: 0;
   }
 
 }
@@ -160,9 +165,10 @@
     width:80%;
   }
 
-  .card {
-    grid-template-columns: 40% auto;
+  .card-infos {
+    font-size: .8rem;
   }
+
 }
 
 @media screen and (max-height: 600px) {
