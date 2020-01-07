@@ -39,6 +39,19 @@
   .film-description p {
     font-size: 0.9rem;
   }
+
+  .card img {
+    display: block;
+    width: auto;
+    max-height: 400px;
+  }
+  .card-infos {
+    width:auto;
+  }
+  .card {
+    font-size: .9rem;
+    align-content: center;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -49,6 +62,21 @@
 
   #films ul li {
     max-height:160px;
+  }
+
+  .card-infos {
+    font-size: .8rem;
+  }
+
+  .card img {
+    max-width: 100%;
+    max-height: 300px;
+    margin: auto;
+  }
+
+  .card-infos {
+    padding-left: 10px;
+    width:100%;
   }
 
 }
@@ -112,8 +140,28 @@
     float: none;
   }
 
-  footer address {
+  #cart thead th.fifth {
+    width: 30px;
+  }
+
+  .remove {
+    width:30px;
+    height:30px;
+    font-size: .7em;
+    line-height: 40px;
+    text-shadow: 0 0 2px black;
+  }
+
+  .remove img{
     width:70%;
+  }
+
+  footer address {
+    width:80%;
+  }
+
+  .card {
+    grid-template-columns: 40% auto;
   }
 }
 
@@ -134,4 +182,8 @@
   .en-promo p.prix-promo {
     margin: 0 auto;
   }
+}
+
+@media handeld () {
+
 }

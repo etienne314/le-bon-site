@@ -182,16 +182,12 @@ section {
   margin: 0 auto;
 }
 
+
 #news {
   overflow: hidden;
   width:60%;
   max-width: 1000px;
   margin-bottom: 1rem;
-}
-
-#news figure img {
-  width: 25%;
-  float: left;
 }
 
 #news figure {
@@ -202,6 +198,11 @@ section {
   font-size: 0;
   text-align: left;
   animation: 20s slidy infinite;
+}
+
+#news figure img {
+  width: 25%;
+  float: left;
 }
 
 
@@ -328,13 +329,6 @@ p.prix {
   background-color: rgb(255,15,15);
 }
 
-.film-prix button a {
-  text-decoration: none;
-  width:100%;
-  height:100%;
-  color: #DDD;
-}
-
 main > h1, main > h1 ~ section {
   width: 80%;
   margin: 20px auto 0 auto;
@@ -345,6 +339,8 @@ main > h1, main > h1 ~ section {
   width: 100%;
 }
 
+
+/* Test implémentation popup (uniquement dans résulats de recherche) */
 /* https://webdevtrick.com/popup-in-pure-css-and-html-get-example-with-source-code/ */
 
 .popup {
@@ -363,6 +359,7 @@ main > h1, main > h1 ~ section {
   overflow: hidden;
   transition: .2s ease-in-out;
 }
+
 .popup-inner {
   position: relative;
   display: grid;
@@ -383,10 +380,12 @@ main > h1, main > h1 ~ section {
   visibility: visible;
   opacity: 1;
 }
+
 .popup:target .popup-inner {
   bottom: 0;
   right: 0;
 }
+
 .closepopup {
   position: absolute;
   right: -1rem;
@@ -412,6 +411,63 @@ main > h1, main > h1 ~ section {
 
 .popup-prix {
   font-size: 2rem;
+}
+
+
+/*------------------ Fiche produit ------------------*/
+
+.card img {
+  max-width: 25vw;
+  max-height: 500px;
+  margin: 0;
+}
+
+.card-infos {
+  padding-left: 10px;
+}
+
+.card-prix button {
+  border: none;
+  color: #DDD;
+  text-shadow: 1px 1px 2px black;
+  cursor: pointer;
+  width:100%;
+  height: 2rem;
+  font-size: 0.9rem;
+  background-color: rgb(255,15,15);
+}
+
+.card-prix {
+  display: block;
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.8rem;
+  padding: 10px;
+  border: 1px solid white;
+}
+
+.card-prix p, .card-prix a{
+  padding: 5px 0;
+  text-align: center;
+  margin:0;
+  width:100%;
+}
+
+.card-light {
+  color: #BBB;
+  text-decoration: underline;
+  margin-right: .5rem;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-description{
+  width:100%;
+  margin-bottom: 20px;
+  text-align: justify;
 }
 
 
@@ -442,6 +498,7 @@ footer address {
   grid-template-columns: 70% 30%;
   align-items: center;
   margin: 0 auto;
+  font-style: normal;
 }
 
 footer p {
@@ -449,6 +506,21 @@ footer p {
   margin: 0;
   padding-top: 10px;
   align-items: stretch;
+}
+
+footer a {
+  display:inline-block;
+  border-bottom: 1px solid white;
+  text-decoration: none;
+  border-radius: 0 0 0 5px;
+  color:inherit;
+  transition-duration: .2s;
+
+}
+
+footer a:hover {
+  border-bottom: 1px solid rgba(240,20,20,0.8);
+  transition-duration: .2s;
 }
 
 footer p img {
@@ -470,3 +542,26 @@ footer p img {
 /*----------------------------------------------------*/
 /*-------------------- FIN FOOTER --------------------*/
 /*----------------------------------------------------*/
+
+/*-------------------- 404 --------------------*/
+
+#main-404 {
+  display: block;
+  width:100%;
+  height:100%;
+  text-align: center;
+  padding-top: 20vh;
+}
+
+#main-404 a {
+  text-decoration: none;
+  background-color: red;
+  color: inherit;
+  padding: 5px 10px;
+}
+
+#main-404 img, #main-404 p {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+}

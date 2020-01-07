@@ -22,8 +22,6 @@ table { border-collapse: collapse; border-spacing: 0; }
 img { border: 0; max-width: 100%; max-height: 100%;}
 
 
-
-
 /** cart table **/
 #cart {
   display: inline-block;
@@ -64,8 +62,13 @@ img { border: 0; max-width: 100%; max-height: 100%;}
 
 tr.productitm {
   max-height: 65px;
-  line-height: 65px;
+  line-height: 1.5em;
   border-bottom: 1px solid #d7dbe0;
+}
+
+tr.productitm a {
+  text-decoration: none;
+  color:inherit;
 }
 
 tr.productitm:target {
@@ -105,12 +108,9 @@ tr.totalprice, tr.extracosts {
   background-color: rgb(22,22,22);
   border-radius: 100%;
   font-size: 1em;
+  line-height: 60px;
   text-shadow: 0 0 2px black;
 }
-
-.remove img {
-}
-
 
 .light {
   color: #CCC;
