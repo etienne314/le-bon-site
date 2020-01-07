@@ -1,6 +1,3 @@
-::selection { background: #bdc0e8; }
-::-moz-selection { background: #bdc0e8; }
-::-webkit-selection { background: #bdc0e8; }
 
 br { display: block; line-height: 1.6em; }
 
@@ -8,11 +5,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 ol, ul { list-style: none; }
 
 input, textarea {
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   outline: none;
 }
@@ -153,7 +145,5 @@ td.checkout {
 #submitbtn:active {
   border-bottom: 0;
   background-color:rgb(220,10,10);
-  -webkit-box-shadow: inset 0 1px 3px 1px rgba(0,0,0,0.25);
-  -moz-box-shadow: inset 0 1px 3px 1px rgba(0,0,0,0.25);
   box-shadow: inset 0 1px 3px 1px rgba(0,0,0,0.25);
 }
