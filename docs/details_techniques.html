@@ -36,30 +36,94 @@
         <h2>Structure du code</h2>
         <section class="w-max">
           <h3>Le <abbr title="Hypertext Markup Language">HTML</abbr></h3>
-          <p>Utilisation des documentations de <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element" target="_blank">Mozilla</a>
-            et du <a href="https://www.w3schools.com/tags/default.asp" target="_blank">W3C</a></p>
+          <p>J'ai essayé d'utiliser au maximum les balises du HTML5 pour structure mes pages, avec le moins de div possible.<br>
+            Chaque corps de page (exceptée la page <a href="nolink.html">404</a>) est constituée:
+          </p>
+          <ul>
+            <li>D'une en-tête <code>&lt;header&gt;</code> dans laquelle se trouve une barre de navigation constituée d'une liste de liens.</li>
+            <li>D'une partie principale <code>&lt;main&gt;</code> constituée d'un titre principal et de sections, ou dans le cas de l'accueil, directement de sections.</li>
+            <li>D'un pied de page <code>&lt;footer&gt;</code> constitué en deux colonnes</li>
+          </ul>
+          <p>
+            Toutes les pages ont été vérifiées par le <a href="https://validator.w3.org/nu/" target="_blank">validateur du W3C</a>.
+          </p>
           <h3>Le <abbr title="Cascading Style Sheets">CSS</abbr></h3>
+          <p>Le CSS est constitué de 3 fichiers:</p>
+          <ul>
+            <li>style.css => le css principal</li>
+            <li>
+              panier.css => le css spécifique au panier, créé à partir du tutoriel d'un exemple de
+              <a href="https://codepen.io/jakestuts/full/qKvew/" target="_blank">codepen.io</a>
+            </li>
+            <li>queries.css => qui regroupe les <code>@medi queries</code> pour le "responsive"</li>
+          </ul>
+          <p>Pour s'y retrouver un peu mieux le CSS est organisé dans le même ordre que les pages et leur structure.
+            Plutôt que me baser sur la hiérarchie et l'organistaion des balises html, j'ai essayé d'utiliser le plus
+            possible des class et id pour les éléments nécessitant une mise en forme spécifique.
+          </p>
+        </section>
+        <h2>Ressources utilisées</h2>
+        <section  class="w-max">
+          <h3>Les images</h3>
+            <ul>
+              <li>
+                Pour les icônes (cf. ressources/icons), j'ai utilisé celles de <a href="https://material.io/resources/icons/?style=baseline" target="_blank">material.io</a>
+                qui sont sous licence <a href="https://www.apache.org/licenses/LICENSE-2.0.html" target="_blank">Apache 2.0</a> donc libres d'utilisation.
+              </li>
+              <li>
+                Les icônes du footer ont été prises sur le site <a href="https://www.iconfinder.com/" target="_blank">iconfinder.com</a>.
+              </li>
+              <li>
+                Le logo du site et l'image hommedaffaires.jpg ont été réalisés par mes soins sur les logiciels Illustrator et Photoshop de la suite
+                <a href="https://www.adobe.com/fr/creativecloud.html" target="_blank">Adobe</a>.
+                </li>
+              <li>
+                Les affiches de films ont été récupérées sur le site de <a href="https://www.blender.org/about/projects/" target="_blank">Blender</a>.
+              </li>
+            </ul>
+          <h3>Le code</h3>
+            <ul>
+              <li>
+                Pour une question esthétique, et par manque de temps, j'ai utilisé du code d'un exemple
+                <a href="https://codepen.io/jakestuts/full/qKvew/" target="_blank">codepen.io</a> pour créer mon panier
+              </li>
+              <li>
+                Je me suis aussi aidé du tutoriel de <a href="https://la-cascade.io/un-carrousel-responsif-en-pur-css/" target="_blank">la-cascade.io</a>
+                pour l'animation des images dans la partie "Nouveautés" de la <a href="index.html">page d'accueil</a>.
+              </li>
+              <li>
+                Ainsi que du tutoriel du site <a href="https://webdevtrick.com/popup-in-pure-css-and-html-get-example-with-source-code/">webdevtrick.com</a>
+                pour intégrer les popups d'ajout d'un article au panier disponibles dans la page de <a href="resultats.html">résultats de recherche</a>.
+              </li>
+            </ul>
+            <p>Grande utilisation des documentations de <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element" target="_blank">Mozilla</a>
+              et du <a href="https://www.w3schools.com/tags/default.asp" target="_blank">W3C</a>. Que ce soit pour le HTML ou le CSS.</p>
         </section>
         <h2>Bilan technique</h2>
         <section  class="w-max">
           <h3>Problèmes rencontrés</h3>
             <ul>
-              <li>Manque de temps pour la mise en place d'outil d'aide au développement (charte graphique, organisation structurelle unifiée)</li>
-              <li>Difficultés avec le positionnement d'éléments en CSS (position: relative, absolute, ...)</li>
+              <li>Manque de temps et compétences pour la mise en place d'outil d'aide au développement: charte graphique, organisation structurelle unifiée</li>
+              <li>Manque de temps pour rédiger les détails techniques aussi (surtout la structure du code) vu que c'est la dernière chose dont je me suis occupé :/</li>
+              <li>Difficultés avec le positionnement d'éléments en CSS (position: relative, absolute, etc...)</li>
               <li>Manque d'utilisation des attributs liés à l'accessibilité</li>
-
+              <li>Beaucoup d'autres qui certainement ont pu être surmontés avant d'être oubliés.</li>
             </ul>
           <h3>Améliorations potentielles</h3>
             <ul>
               <li>Fixer une charte graphique à laquelle se référer lors du développement</li>
-              <li>Plus de commentaires dans les fichiers</li>
-              <li>Regrouper des blocs par propriétés communes</li>
-              <li>Rendre les éléments plus "responsive" (liste des produits)</li>
-              <li>Rendre plus "responsive" pour téléphone (ex: faire un bouton menu lorsque l'écran est un téléphone, cf. <code>id="menu-menu"</code>)</li>
-              <li>Améliorer le design de la liste des produits</li>
+              <li>Mettre plus de commentaires dans les fichiers</li>
               <li>Mieux se renseigner sur les bonnes pratiques du CSS</li>
+              <li>Regrouper des blocs par propriétés communes pour optimiser le code CSS</li>
+              <li>Attribuer des propriétés CSS par classes spécifiquement prévues pour des tâches plus précises,
+                à la manière des frameworks CSS.<br>Cela me semble être une pratique plus courante 🤷‍</li>
+              <li>Rendre les éléments plus "responsive". Notamment avec l'utilisation des <code>@media queries</code></li>
+              <li>Rendre plus "responsive" pour téléphone.<br>ex: faire un bouton menu lorsque l'écran est un téléphone,
+                adapter la taille du texte et des éléments, ...</li>
+              <li>Améliorer le design du panier et de la fiche produit (et son contenu)</li>
               <li>Mettre 3 colonnes dans le footer</li>
-              <li>Problème parce que utilisation de tag button dans la partie "Ajouter au panier" avec un lien dedans alors que je devrais mettre juste le lien.</li>
+              <li>Implémenter à tous les bouton "Ajouter au panier" le popup accessible lors de l'ajout au panier
+                depuis la page de résultats de recherche</li>
             </ul>
         </section>
       </section>

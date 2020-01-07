@@ -50,6 +50,11 @@
     font-size: .9rem;
     align-content: center;
   }
+
+  #who section {
+    width: 80%;
+    transition-duration: .3s;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -188,8 +193,4 @@
   .en-promo p.prix-promo {
     margin: 0 auto;
   }
-}
-
-@media handeld () {
-
 }

@@ -15,6 +15,11 @@ body {
   font-family: Arial;
 }
 
+a {
+  text-decoration: none;
+  color: rgb(240,200,100);
+}
+
 /*----------------------------------------------------*/
 /*-------------------- DEBUT MENU --------------------*/
 /*----------------------------------------------------*/
@@ -97,8 +102,6 @@ header ul li a {
   align-items: center;
   color: inherit;
   text-align: center;
-  text-decoration: none;
-  /* border: 1px solid red; */
 }
 
 header ul li a:hover {
@@ -164,7 +167,7 @@ header ul li a:hover {
 
 main {
   margin: 0;
-  padding: 0;
+  padding: 10px 0;
   display: grid;
   grid-template-columns: auto;
   align-content: start;
@@ -555,8 +558,24 @@ footer p img {
 
 /*------------- qui sommes-nous --------------*/
 
-#who section{
+#who section {
+  width: 60%;
   text-align: justify;
+}
+
+#who figure {
+  margin:auto;
+}
+
+#who figure img {
+  max-height: 300px;
+  box-shadow: 1px 1px 8px black;
+}
+
+#who figure figcaption {
+  color: #999;
+  text-align: center;
+  font-size: 0.8em;
 }
 
 
